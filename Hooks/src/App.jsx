@@ -3,18 +3,19 @@ import './App.css'
 
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [name, setName] = useState("Hooks")
+  const [value, setValue] =useState(0)
+  const [count, setCount] =useState(0)
+
 
   useEffect(()=>{
-    setTimeout(()=>{
-      setCount(count => count+1);
-    },2000)
-  },[count, name])
-
+    setCount(prev=>prev+1)
+  })
   return (
     <>
-    <h1>I have rendered {count} times!</h1>
+   <button onClick={()=>{setValue(prev=>prev -1)}}>-1</button>
+   <h1>{value}</h1>
+   <button onClick={()=>{setValue(prev=>prev +1)}}>+1</button>
+   <h1>Render Count:{count}</h1>
     </>
   )
 }
