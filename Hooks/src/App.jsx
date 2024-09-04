@@ -1,22 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './App.css'
-import {useState} from 'react';
+
 
 function App() {
- const [count, setCount] = useState(0);
- const increaseCount=()=>{
-  setCount(count=>count+1)
-  setCount(count=>count+1);
-  setCount(count=>count+1);
-  setCount(count=>count+1);
- }
+  const [count, setCount] = useState(0)
+  const [name, setName] = useState("Hooks")
 
- 
+  useEffect(()=>{
+    setTimeout(()=>{
+      setCount(count => count+1);
+    },2000)
+  },[count, name])
 
   return (
     <>
-    <h1>Count: {count}</h1>
-    <button onClick={increaseCount}>Increase by 4</button>
+    <h1>I have rendered {count} times!</h1>
     </>
   )
 }
