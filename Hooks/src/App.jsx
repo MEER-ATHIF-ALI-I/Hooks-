@@ -3,18 +3,24 @@ import './App.css'
 import {useState} from 'react';
 
 function App() {
- const [color, setColor]=useState('Red')
+const [car, setCar] =useState({
+  brand: "Ferrari",
+  model: "Roma",
+  year: "2023",
+  color: "Red"
+});
 
+ const changeColor = ()=>{
+  setCar((car)=>{
+    return {...car, color:"blue"}
+  })
+ }
 
-  
-  const changeColor=()=>{
-    setColor('Blue')
-  }
   return (
     <>
-    <h1>My favourite color is {color}!</h1>
-    <button onClick={changeColor}>blue</button>
-   
+    <h1>My {car.brand}</h1>
+    <h2>It is a {car.color} {car.model} from {car.year}</h2>
+    <button onClick={changeColor}>Blue</button>
     </>
   )
 }
