@@ -6,4 +6,7 @@
 4. useState with previous state example.
 5. Each and every time we run a component useEffect will run.
 6. useEffect with or without dependency array.
+7. why useRef
+8. useRef does not trigger re-render
+9. useRef for accessing DOM elements.
 
