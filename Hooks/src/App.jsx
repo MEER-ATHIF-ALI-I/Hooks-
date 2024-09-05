@@ -10,7 +10,7 @@ function App() {
     console.log('Calculation done!');
     return Math.pow(num, 3)
   }
-  const result = cubeNum(number);
+  const result = useMemo(()=>{cubeNum(number)},[number]);
   return (
     <>
     <input type="number" value={number} onChange={(e)=>{setNumber(e.target.value)}}/>
