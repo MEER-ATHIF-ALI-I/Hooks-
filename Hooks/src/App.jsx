@@ -1,19 +1,22 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState, useRef, useMemo } from 'react'
 import './App.css'
 
 
 function App() {
- 
- const inputElem= useRef()
+  const [number, setNumber] = useState(0)
+  const [counter, setCounter] = useState(0)
 
-const btnClicked=()=>{
-  console.log(inputElem.current);
-  inputElem.current.style.background= "blue";
-}
+  function cubeNum(num){
+    console.log('Calculation done!');
+    return Math.pow(num, 3)
+  }
+  const result = cubeNum(number);
   return (
     <>
-  <input type="text" ref={inputElem}/>
-  <button onClick={btnClicked}>Click Here</button>
+    <input type="number" value={number} onChange={(e)=>{setNumber(e.target.value)}}/>
+    <h1>Cube of the number: {result}</h1>
+    <button onClick={()=>{setCounter(counter+1)}}>Counter++</button>
+    <h1>Counter: {counter}</h1>
     </>
   )
 }
