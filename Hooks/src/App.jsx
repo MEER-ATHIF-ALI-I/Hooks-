@@ -1,11 +1,11 @@
-import React, { useEffect, useState, useRef, useMemo } from 'react'
+import React, { useEffect, useState, useRef, useMemo, useCallback } from 'react'
 import './App.css'
 import Header from './components/Header';
 
 
 function App() {
    const [count, setCount] =useState(0);
-   const newFn=()=>{}
+   const newFn= useCallback(()=>{},[])
   return (
     <>
     <Header newFn={newFn}/>
