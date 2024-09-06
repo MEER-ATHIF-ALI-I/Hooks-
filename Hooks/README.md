@@ -9,4 +9,9 @@
 7. why useRef
 8. useRef does not trigger re-render
 9. useRef for accessing DOM elements.
+10. why useMemo
+11. useMemo uses memoized value
+12. why useCallback
+13. useCallback does not create new instances everytime
+14. when add dependencies it creates new instance everytime.
 
