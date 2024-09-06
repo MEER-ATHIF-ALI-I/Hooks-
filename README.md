@@ -14,3 +14,4 @@
 12. why useCallback
 13. useCallback does not create new instances everytime
 14. when add dependencies it creates new instance everytime.
+15. useReducer Hook why and when to use useReducer
