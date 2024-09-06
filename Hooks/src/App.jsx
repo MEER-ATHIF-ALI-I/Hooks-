@@ -1,16 +1,16 @@
 import React, { useEffect, useState, useRef, useMemo, useCallback } from 'react'
 import './App.css'
-import Header from './components/Header';
+import Header from './components/Footer';
+import Profile from './components/Profile';
+import Footer from './components/Footer';
 
 
 function App() {
-   const [count, setCount] =useState(0);
-   const newFn= useCallback((count)=>{},[count])
+   
   return (
     <>
-    <Header newFn={newFn}/>
-    <h1>{count}</h1>
-    <button onClick ={()=>setCount(prev=>prev+1)}>Click Here</button>
+    <Profile/>
+    <Footer/>
     </>
   )
 }
